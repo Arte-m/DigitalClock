@@ -8,6 +8,12 @@ calculateTime = () => {
     /////////////
     let second = date.getSeconds();
     /////////////
+    // hour = hour % 12;
+    // hour = hour ? hour : '12';
+    // hour = hour < 10 ? '0' + hour : hour;
+    // minute = minute < 10 ? '0' + minute : minute;
+    second = second < 10 ? '0' + second : second;
+    ////////////
 
     document.querySelector('#day').textContent = dayNames[dayNumber];
     document.querySelector('#hour').textContent = hour;
